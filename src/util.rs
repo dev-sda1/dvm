@@ -170,15 +170,6 @@ exec /home/{}/.dvm/{}/{} "$@" $USER_FLAGS
     }
   }
 
-  if std::fs::read_dir(format!("/home/{}/.local/share/icons",user)).is_err() {
-    match std::fs::create_dir(format!("/home/{}/.local/share/icons",user)) {
-      Ok(_) => {},
-      Err(_) => {
-        error!("{}", format!("Couldn't find /home/{}/.local/share/applications, and couldn't make the folder automatically. You'll need to make the folder yourself and re-run the installer",user));
-      }
-    }
-  }
-
   // copy desktop file to .local/share/applications
   Command::new("install")
     .arg("-Dm644")
