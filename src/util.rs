@@ -1,4 +1,4 @@
-use std::{collections::HashMap, fmt::format, fs};
+use std::{collections::HashMap, fs};
 
 use tokio::process::Command;
 
