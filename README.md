@@ -1,28 +1,21 @@
 # dvm (Discord Version Manager)
-Allowing you to manage all of your discord versions. This was made as I was impatient to waiting for AUR maintainers (no offense 😂 we have lives) to update discord packages. This solves that problem: since you can update your version by just doing `dvm update <type>`. This utility is heavily inspired by the [`rustup` command line tool](https://rustup.rs)
+This is a fork of (diced/dvm)[https://github.com/diced/dvm] with a couple of fixes. Keeping any changes I make seperate for now, but might open a PR with them at some point in the future.
 
 # Installing
-## <img src="https://www.vectorlogo.zone/logos/archlinux/archlinux-icon.svg" height="20"/> Arch Linux
-You can install the binary version of dvm through the [`dvm` AUR package](https://aur.archlinux.org/packages/dvm) or [`dvm-bin` AUR package](https://aur.archlinux.org/packages/dvm-bin)
 
-Or you can compile from source using the [`dvm-git` AUR package](https://aur.archlinux.org/packages/dvm)
+## Using the main version
+See the (original repo)[https://github.com/diced/dvm?tab=readme-ov-file#installing] for AUR packages and binaries
 
-## Other Distros
-At the moment I haven't bothered making this available on other package managers as the issue dvm wants to solve usually isn't present in those other distros.
-
-### Compiling from Source
-If you prefer compiling from source you can do the following
-
-#### Prequisites
-* Rust Nightly ([rustup](https://rustup.rs) or your distro might provide a `rustup` package, then `rustup install nightly`)
+#### Using this fork
+* Rust ([rustup](https://rustup.rs) or your distro might provide a `rustup` package, then `rustup install stable`)
 ```sh
-git clone https://github.com/diced/dvm
+git clone https://github.com/dev-sda1/dvm
 cd dvm
-cargo +nightly build # make sure you have rust nightly installed like stated above
+cargo build --release
 ```
 
 ### Using prebuilt binary
-If you don't want to bother compiling from source then you may use the precompiled binary that I provide on the [releases page](https://github.com/diced/dvm/releases)
+If you don't want to bother compiling from source then you may use the precompiled binary that diced provides on their [releases page](https://github.com/diced/dvm/releases)
 
 *Note: The precompiled binary is not a statically compiled binary, so if it happens to error, run `ldd dvm-x86_64-unknown-linux-gnu` and it will show the libraries it needs, then install them.*
 
