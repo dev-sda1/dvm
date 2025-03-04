@@ -1,10 +1,10 @@
 # dvm (Discord Version Manager)
-This is a fork of (diced/dvm)[https://github.com/diced/dvm] with a couple of fixes. Keeping any changes I make seperate for now, but might open a PR with them at some point in the future.
+This is a fork of [diced/dvm](https://github.com/diced/dvm) with a couple of fixes. Keeping any changes I make seperate for now, but might open a PR with them at some point in the future.
 
 # Installing
 
 ## Using the main version
-See the (original repo)[https://github.com/diced/dvm?tab=readme-ov-file#installing] for AUR packages and binaries
+See the [original repo](https://github.com/diced/dvm?tab=readme-ov-file#installing) for AUR packages and binaries
 
 #### Using this fork
 * Rust ([rustup](https://rustup.rs) or your distro might provide a `rustup` package, then `rustup install stable`)
